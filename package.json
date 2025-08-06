@@ -1,0 +1,41 @@
+{
+  "name": "app-animals-garden",
+  "version": "1.0.0",
+  "description": "API para gestion de veterinaria.",
+  "main": "index.js",
+  "scripts": {
+    "startProd": "node production/index.js",
+    "startBabel": "babel src --out-dir production",
+    "startDev": "nodemon src/index.js --exec babel-node"
+  },
+  "keywords": [],
+  "author": "Cristian Camilo Rodriguez Capera",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.18.0",
+    "express-validator": "^7.0.1",
+    "fs": "^0.0.1-security",
+    "helmet": "^7.1.0",
+    "https": "^1.0.0",
+    "jquery": "^3.7.1",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "nodemon": "^3.0.3"
+  }
+}
