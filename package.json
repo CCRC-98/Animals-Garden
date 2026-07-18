@@ -1,7 +1,7 @@
 {
   "name": "animals-garden-app",
   "version": "1.0.0",
-  "description": "Sistema para gestion de veterinaria.",
+  "description": "Sistema para gestion de veterinaria",
   "main": "dist/server.js",
   "scripts": {
     "dev": "tsx --watch src/server.js",
@@ -9,7 +9,7 @@
     "prod": "node --env-file=.env dist/server.js"
   },
   "keywords": [],
-  "author": "Cristian Camilo Rodriguez Capera",
+  "author": "CCRC",
   "license": "UNLICENSED",
   "dependencies": {
     "bcryptjs": "^3.0.3",
