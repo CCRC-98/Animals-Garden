@@ -1,0 +1,209 @@
+<!-- Notifications area -->
+<section class="full-width container-notifications">
+	<div class="full-width container-notifications-bg btn-Notification"></div>
+	<section class="NotificationArea">
+		<div class="full-width text-center NotificationArea-title tittles">Notifications <i
+				class="zmdi zmdi-close btn-Notification"></i></div>
+		<a href="#" class="Notification" id="notifation-unread-1">
+			<div class="Notification-icon"><i class="zmdi zmdi-accounts-alt bg-info"></i></div>
+			<div class="Notification-text">
+				<p>
+					<i class="zmdi zmdi-circle"></i>
+					<strong>New User Registration</strong>
+					<br>
+					<small>Just Now</small>
+				</p>
+			</div>
+			<div class="mdl-tooltip mdl-tooltip--left" for="notifation-unread-1">Notification as UnRead</div>
+		</a>
+		<a href="#" class="Notification" id="notifation-read-1">
+			<div class="Notification-icon"><i class="zmdi zmdi-cloud-download bg-primary"></i></div>
+			<div class="Notification-text">
+				<p>
+					<i class="zmdi zmdi-circle-o"></i>
+					<strong>New Updates</strong>
+					<br>
+					<small>30 Mins Ago</small>
+				</p>
+			</div>
+			<div class="mdl-tooltip mdl-tooltip--left" for="notifation-read-1">Notification as Read</div>
+		</a>
+		<a href="#" class="Notification" id="notifation-unread-2">
+			<div class="Notification-icon"><i class="zmdi zmdi-upload bg-success"></i></div>
+			<div class="Notification-text">
+				<p>
+					<i class="zmdi zmdi-circle"></i>
+					<strong>Archive uploaded</strong>
+					<br>
+					<small>31 Mins Ago</small>
+				</p>
+			</div>
+			<div class="mdl-tooltip mdl-tooltip--left" for="notifation-unread-2">Notification as UnRead</div>
+		</a>
+		<a href="#" class="Notification" id="notifation-read-2">
+			<div class="Notification-icon"><i class="zmdi zmdi-mail-send bg-danger"></i></div>
+			<div class="Notification-text">
+				<p>
+					<i class="zmdi zmdi-circle-o"></i>
+					<strong>New Mail</strong>
+					<br>
+					<small>37 Mins Ago</small>
+				</p>
+			</div>
+			<div class="mdl-tooltip mdl-tooltip--left" for="notifation-read-2">Notification as Read</div>
+		</a>
+		<a href="#" class="Notification" id="notifation-read-3">
+			<div class="Notification-icon"><i class="zmdi zmdi-folder bg-primary"></i></div>
+			<div class="Notification-text">
+				<p>
+					<i class="zmdi zmdi-circle-o"></i>
+					<strong>Folder delete</strong>
+					<br>
+					<small>1 hours Ago</small>
+				</p>
+			</div>
+			<div class="mdl-tooltip mdl-tooltip--left" for="notifation-read-3">Notification as Read</div>
+		</a>
+	</section>
+</section>
+<!-- navLateral -->
+<section class="full-width navLateral">
+	<div class="full-width navLateral-bg btn-menu"></div>
+	<div class="full-width navLateral-body">
+		<div class="full-width navLateral-body-logo text-center tittles">
+			<i class="zmdi zmdi-close btn-menu"></i> Historiales medicos
+		</div>
+		<figure class="full-width navLateral-body-tittle-menu">
+			<div>
+				<img src="/assets/img/avatar-male.png" alt="Avatar" class="img-responsive">
+			</div>
+			<figcaption>
+				<span>
+					{{name}}<br>
+					<small>Cliente</small>
+				</span>
+			</figcaption>
+		</figure>
+			<nav class="full-width">
+				<ul class="full-width list-unstyle menu-principal">
+					<li class="full-width">
+						<a href="/user" class="full-width">
+							<div class="navLateral-body-cl">
+								🐕
+							</div>
+							<div class="navLateral-body-cr">
+								INICIO
+							</div>
+						</a>
+					</li>
+				<li class="full-width divider-menu-h"></li>
+				<li class="full-width">
+					<a href="/user/userProfile/{{dni}}" class="full-width">
+						<div class="navLateral-body-cl">
+							<i class="zmdi zmdi-accounts"></i>
+						</div>
+						<div class="navLateral-body-cr">
+							PERFIL
+						</div>
+					</a>
+				</li>
+				<li class="full-width divider-menu-h"></li>
+				<li class="full-width">
+					<a href="/user/petList/{{dni}}" class="full-width">
+						<div class="navLateral-body-cl">
+							🐾
+						</div>
+						<div class="navLateral-body-cr">
+							MASCOTAS
+						</div>
+					</a>
+				</li>
+				<li class="full-width divider-menu-h"></li>	
+			</ul>
+		</nav>
+	</div>
+</section>
+<!-- pageContent -->
+<section class="full-width pageContent">
+	<!-- navBar -->
+	<div class="full-width navBar">
+		<div class="full-width navBar-options">
+			<i class="zmdi zmdi-swap btn-menu" id="btn-menu"></i>
+			<div class="mdl-tooltip" for="btn-menu">Hide / Show MENU</div>
+			<nav class="navBar-options-list">
+				<ul class="list-unstyle">
+					<li class="btn-Notification" id="notifications">
+						<i class="zmdi zmdi-notifications"></i>
+						<div class="mdl-tooltip" for="notifications">Notifications</div>
+					</li>
+					<li class="btn-exit" id="btn-exit">
+						<i class="zmdi zmdi-power"></i>
+						<div class="mdl-tooltip" for="btn-exit">LogOut</div>
+					</li>
+					<li class="text-condensedLight noLink"><small>{{name}}</small></li>
+					<li class="noLink">
+						<figure>
+							<img src="/assets/img/avatar-male.png" alt="Avatar" class="img-responsive">
+						</figure>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<section class="full-width header-well">
+		<div class="full-width header-well-icon">
+			<i class="zmdi zmdi-shopping-cart"></i>
+		</div>
+		<div class="full-width header-well-text">
+			<p class="text-condensedLight">
+				Aca se listan todos los historiales medicos de la mascota
+			</p>
+		</div>
+	</section>
+	<div class="full-width divider-menu-h"></div>
+	<div class="mdl-grid">
+		<div class="mdl-cell mdl-cell--4-col-phone mdl-cell--8-col-tablet mdl-cell--12-col-desktop">
+			<div class="table-responsive">
+				<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp full-width table-responsive">
+					<thead>
+						<tr>
+							<th class="mdl-data-table__cell--non-numeric">Fecha creacion</th>
+							<th>Id veterinario</th>
+							<th>Id servicio</th>
+							<th>Opciones</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each historiales}}
+							<tr>
+								<td class="mdl-data-table__cell--non-numeric">{{fecha_creacion}}</td>
+								<td>{{id_veterinario}}</td>
+								<td>{{id_servicio}}</td>
+								<td>
+									<a href="/vet/petList/historyList/{{id_mascota}}/history/{{id_hist_medico}}">
+										<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+												<path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+												<path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+											</svg>
+										</button>
+									</a>
+								</td>
+							</tr>
+						{{else}}
+							<tr>
+								<td colspan="5">
+									<div class="col-md-4 mx-auto">
+										<div class="card card-body text-center">
+											<p>No hay historiales medicos registrados aun.</p>
+										</div>
+									</div>
+								</td>
+							</tr>
+						{{/each}}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</section>

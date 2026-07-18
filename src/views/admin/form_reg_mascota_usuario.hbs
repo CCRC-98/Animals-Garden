@@ -1,0 +1,44 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group">
+                            <label>Formulario de registro para mascotas</label>
+                        </div>
+                    <form action="./createPet" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="nombre" placeholder="Nombre" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="especie" placeholder="Especie">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="raza" placeholder="Raza">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="sexo" placeholder="Sexo">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="edad" placeholder="Edad">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="propietario" placeholder="Dni del propietario">
+                        </div>
+                        
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                    <a href="/admin/petList">
+                        <button class="btn btn-secondary btn-block">
+                            Cancelar
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
