@@ -4,7 +4,7 @@
   "description": "Sistema para gestion de veterinaria",
   "main": "dist/server.js",
   "scripts": {
-    "dev": "tsx --watch src/server.js",
+    "dev": "tsx --env-file=.env --watch src/server.js",
     "build": "tsc",
     "prod": "node --env-file=.env dist/server.js"
   },
@@ -16,7 +16,6 @@
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
-    "dotenv": "^17.4.2",
     "ejs": "^6.0.1",
     "express": "^5.2.1",
     "express-handlebars": "^9.0.1",
