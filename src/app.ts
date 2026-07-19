@@ -1,28 +1,16 @@
-//  Importacion de modulos y dependencias
-import express from "express";
-import cookieParser from "cookie-parser";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
-import { engine } from "express-handlebars";
+import express from "express";
+import cookieParser from "cookie-parser";
 import path from "path";
+import { engine } from "express-handlebars";
+import { router } from "./router";
 
-import adminRoutes from "./routes/admin.routes.js";
-import vetRoutes from "./routes/vet.routes.js";
-import userRoutes from "./routes/user.routes.js";
-
-import authRoutes from "./routes/auth.routes.js";
-import aboutUsRoutes from "./routes/aboutUs.routes.js";
-import pqrsRoutes from "./routes/pqrs.routes.js";
-
-import authControllers from "./controllers/auth.controller.js";
-import authMiddlewares from "./middlewares/auth.middlewares.js";
-
-//  Inicializacion de la aplicacion
 export function CreateApp() {
   const app = express();
 
-  //  Middleware
+  //  Middlewares
   app.use(cors());
   app.use(helmet());
   app.use(morgan("dev"));
@@ -37,7 +25,7 @@ export function CreateApp() {
     next();
   });
 
-  //  Configuraciones motor de plantillas
+  //  Configuracion motor de plantillas
   app.set("views", path.join(__dirname, "views"));
   app.engine(
     ".hbs",
@@ -51,37 +39,11 @@ export function CreateApp() {
   );
   app.set("view engine", ".hbs");
 
-  //  Public
+  //  Archivos estaticos
   app.use(express.static(path.join(__dirname, "public")));
 
-  //  Ruta principal
-  app.get("/", (req, res) => {
-    res.status(200).render("index/index");
-  });
-
-  //  Rutas externas
-  app.use("/signIn", authRoutes);
-  app.use("/aboutUs", aboutUsRoutes);
-  app.use("/createPQRS", pqrsRoutes);
-
-  app.use(
-    "/admin",
-    authControllers.isAuthenticated,
-    authMiddlewares.verifyToken,
-    adminRoutes,
-  );
-  app.use(
-    "/vet",
-    authControllers.isAuthenticated,
-    authMiddlewares.verifyToken,
-    vetRoutes,
-  );
-  app.use(
-    "/user",
-    authControllers.isAuthenticated,
-    authMiddlewares.verifyToken,
-    userRoutes,
-  );
+  //  Enrutador de app
+  app.use("/", router);
 
   //  Limpiador de cache
   app.use(function (req, res, next) {
